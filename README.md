@@ -2,7 +2,7 @@
 
 Based on https://www.djangobrothers.com/tutorials/blog_app/first_app/
 
-Special thanks to @DjangoBrothers 
+Special thanks to @DjangoBrothers & @aki_yok
 
 ## How to setup??
 ```

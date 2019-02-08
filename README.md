@@ -5,8 +5,10 @@ Based on https://www.djangobrothers.com/tutorials/blog_app/first_app/
 Special thanks to @DjangoBrothers 
 
 ## How to setup??
-git clone git@github.com:gkzz/twbot.git
-source install_django_ubuntu.sh
+```
+$ git clone git@github.com:gkzz/twbot.git
+$ source install_django_ubuntu.sh
+```
 
 ## tree mysite
 ```
@@ -21,12 +23,11 @@ source install_django_ubuntu.sh
 
 
 ## Notes
+```
 $ python --version
 Python 3.6.5
-
 $ django-admin version
 2.1.5
-
 $ cat /etc/os-release
 NAME="Ubuntu"
 VERSION="16.04.5 LTS (Xenial Xerus)"
@@ -39,6 +40,7 @@ SUPPORT_URL="http://help.ubuntu.com/"
 BUG_REPORT_URL="http://bugs.launchpad.net/ubuntu/"
 VERSION_CODENAME=xenial
 UBUNTU_CODENAME=xenial
+```
 
 ### If you face trouble...
 plz give me comments!

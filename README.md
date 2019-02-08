@@ -9,6 +9,7 @@ git clone git@github.com:gkzz/twbot.git
 source install_django_ubuntu.sh
 
 ## tree mysite
+```
 ├── config
 │   ├── __init__.py
 │   ├── settings.py
@@ -16,6 +17,7 @@ source install_django_ubuntu.sh
 │   └── wsgi.py
 ├── install_django_ubuntu.sh
 └── manage.py
+```
 
 
 ## Notes

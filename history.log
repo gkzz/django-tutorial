@@ -45,8 +45,8 @@ $ python manage.py createsuperuser
 
 Username (leave blank to use <$USER>): <admin>
 Email address: <Press Enter Key>
-Password: <admin123>
-Password (again):
+Password: <xxxxxxxxx>
+Password (again): <xxxxxxxxx>
 This password is too common.
 Bypass password validation and create user anyway? [y/N]: y
 Superuser created successfully.

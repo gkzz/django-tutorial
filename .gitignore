@@ -1,0 +1,9 @@
+# general
+.
+..
+blog/_pycache_
+blog/migrations/*
+
+
+# python virtual env
+36/*

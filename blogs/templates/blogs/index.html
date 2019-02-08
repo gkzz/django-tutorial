@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>m-flo 20th ANNIVERSARY SITE</title>
+</head>
+<body>
+    <h1 style="text-align: center;">We Loves m-flo</h1>
+    <h2>Our Favorite lyrics are bellow.</h2>
+    {% for blog in blogs %}
+    <h3>
+        {{ blog.title }}
+    </h3>
+    <div>
+        {{ blog.text | truncatechars:100 }}
+    </div>
+    <div style="text-align: right;">
+        <a href="{% url 'blogs:detail' blog_id=blog.id %}">Read More</a>
+    </div>
+    {% endfor %}
+</body>
+</html>

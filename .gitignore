@@ -1,8 +1,10 @@
 # general
 .
 ..
-blog/_pycache_
-blog/migrations/*
+blogs/_pycache_
+blogs/_pycache_/*
+blogs/migrations/*
+config/_pycache_
 
 
 # python virtual env

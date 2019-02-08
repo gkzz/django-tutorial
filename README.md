@@ -21,7 +21,6 @@ $ source install_django_ubuntu.sh
 └── manage.py
 ```
 
-
 ## Notes
 ```
 $ python --version
@@ -41,6 +40,10 @@ BUG_REPORT_URL="http://bugs.launchpad.net/ubuntu/"
 VERSION_CODENAME=xenial
 UBUNTU_CODENAME=xenial
 ```
+
+### history.log 
+This log may give you some tips as my commands were logged.
+
 
 ### If you face trouble...
 plz give me comments!

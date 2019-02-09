@@ -24,6 +24,18 @@ INSTALLED_APPS = [
     'blogs', #add
 ]
 
+$ vim <your project name e.g. config>/urls.py
+
+from django.contrib import admin
+#from django.urls import path     #defalut
+from django.urls import path, include #add
+
+urlpatterns = [
+    path('admin/', admin.site.urls),  #defalut
+    path('', include('blogs.urls')),  #add
+]
+
+
 $ mkdir -p <your project name e.g. config>/blogs/templates/blogs
 $ vim <your project name e.g. config>/blogs/templates/blogs/index.html
 

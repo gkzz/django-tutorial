@@ -41,8 +41,8 @@ VERSION_CODENAME=xenial
 UBUNTU_CODENAME=xenial
 ```
 
-### history.log 
-This log may give you some tips as my commands were logged.
+### history.txt
+This text may give you some tips as my commands were logged.
 
 
 ### If you face trouble...

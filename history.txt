@@ -1,0 +1,82 @@
+$ python manage.py runserver
+$ vim <your project name e.g. django-tutorial>/<setting directory e.g. config>/settings.py
+#LANGUAGE_CODE = 'ja-JP'
+TIME_ZONE = 'Asia/Tokyo'
+
+$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  
+$ pwd
+$HOME/<your project name e.g. django-tutorial>
+$ python manage.py startapp blogs
+$ vim <your project name e.g. django-tutorial>/<setting directory e.g. config>/settings.py
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'blogs', #add
+]
+
+$ vim <your project name e.g. django-tutorial>/<setting directory e.g. config>urls.py
+
+from django.contrib import admin
+#from django.urls import path     #defalut
+from django.urls import path, include #add
+
+urlpatterns = [
+    path('admin/', admin.site.urls),  #defalut
+    path('', include('blogs.urls')),  #add
+]
+
+
+$ vim <your project name e.g. django-tutorial>/blogs/models.py
+
+def index(request):      #add
+    #return render(request, 'blogs/index.html')
+
+$ mkdir -p <your project name e.g. django-tutorial>/blogs/templates/blogs
+$ vim <your project name e.g. django-tutorial>/blogs/templates/blogs/index.html
+
+<h1>Hello World!</h1>
+
+$ vim <your project name e.g. django-tutorial>/blogs/urls.py
+
+from django.urls import path
+from . import views
+
+app_name = 'blogs'
+urlpatterns = [
+    path('', views.index, name='index'),
+]
+
+$ python manage.py makemigrations
+$ python manage.py migrate
+$ python manage.py createsuperuser
+
+Username (leave blank to use <$USER>): <admin>
+Email address: <Press Enter Key>
+Password: <xxxxxxxxx>
+Password (again): <xxxxxxxxx>
+This password is too common.
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+
+
+$ python manage.py shell
+>>> from blogs.models import Blog
+>>> Blog.objects.all()
+<QuerySet [<Blog: come again>]>
+>>> blog = Blog.objects.get(id=1)>>> blog.title
+'come again'
+>>> blog.text"金曜日のスカラに君を忘れに、踊り明かすよ、今夜\r\nI'll sing you this song. 届くように\r\n切ないメロディーに涙しないようにクールにね\r\n踊り続けさせて、ねえようにクールにね\r\n踊り続けさせて、ねえ、DJ won't you
+、DJ won't you come again\r\nフロアーをもっと熱く、響かせて\r\nYeah 朝までまわし続けて、帰りたくないから止めないで"
+
+

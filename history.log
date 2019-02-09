@@ -1,5 +1,5 @@
 $ python manage.py runserver
-$ vim <your project name e.g. config>/settings.py
+$ vim <your project name e.g. django-tutorial>/<setting directory e.g. config>/settings.py
 LANGUAGE_CODE = 'ja-JP'
 TIME_ZONE = 'Asia/Tokyo'
 
@@ -12,7 +12,7 @@ Running migrations:
   
 $ pwd
 $ python manage.py startapp blogs
-$ vim <your project name e.g. config>/settings.py
+$ vim <your project name e.g. django-tutorial>/<setting directory e.g. config>/settings.py
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -24,7 +24,7 @@ INSTALLED_APPS = [
     'blogs', #add
 ]
 
-$ vim <your project name e.g. config>/urls.py
+$ vim <your project name e.g. django-tutorial>/<setting directory e.g. config>urls.py
 
 from django.contrib import admin
 #from django.urls import path     #defalut
@@ -36,12 +36,12 @@ urlpatterns = [
 ]
 
 
-$ mkdir -p <your project name e.g. config>/blogs/templates/blogs
-$ vim <your project name e.g. config>/blogs/templates/blogs/index.html
+$ mkdir -p <your project name e.g. django-tutorial>/blogs/templates/blogs
+$ vim <your project name e.g. django-tutorial>/blogs/templates/blogs/index.html
 
 <h1>Hello World!</h1>
 
-$ vim <your project name e.g. config>/blogs/urls.py
+$ vim <your project name e.g. django-tutorial>/blogs/urls.py
 
 from django.urls import path
 from . import views
